@@ -3,7 +3,7 @@ import "./Product.css";
 const Product = () => {
   const [Data, setData] = useState([]);
 
-  let apikey = "https://fakestoreapi.com/products?limit=10";
+  let apikey = "https://fakestoreapi.com/products?limit=18";
 
 
   function fetchData(url){
@@ -23,14 +23,20 @@ const Product = () => {
 
     {
       Data.map(i =>{
-        const {id , category , image , price, rating} = i;
+        const {id , category , image , price, rating, title} = i;
 
         return(
           <div className="box" key={id}>
             <div className="image-box">
-
+              <img src={image}/>
             </div>
-            <img src={image}/>
+            <div className="text-box">
+              <h3>{category}</h3>
+              <p>{title}</p>
+              <p>{price}</p>
+              {/* <p>{rating}</p> */}
+            </div>
+            
           </div>
         )
 
