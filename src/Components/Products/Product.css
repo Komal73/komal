@@ -1,0 +1,26 @@
+.productsShow{
+    height: auto;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 2px red solid;
+}
+
+.box{
+    height: 300px;
+    width: 200px;
+    border: 2px black solid;
+    color: black;
+    margin: 10px;
+}
+.image-box{
+    height: 100px;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
